@@ -22,7 +22,7 @@ class LegoSpider(scrapy.Spider):
             PIECES_SELECTOR = './/dl[dt/text() = "Pieces"]/dd/a/text()'
             MINIFIGS_SELECTOR = './/dl[dt/text() = "Minifigs"]/dd[2]/a/text()'
             # IMAGE_SELECTOR = 'img ::attr(src)'
-            print("------ NEW SET ------")
+            print("------- NEW SET -------")
             yield {
                 'name': brickset.css(NAME_SELECTOR).extract_first(),
                 'pieces': brickset.xpath(PIECES_SELECTOR).extract_first(),
